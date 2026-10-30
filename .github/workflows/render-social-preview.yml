@@ -23,7 +23,7 @@ jobs:
       - name: Render exact website-brand SVG as WhatsApp-compatible PNG
         run: |
           npm install --no-save --package-lock=false sharp
-          node -e "require('sharp')('og-website-brand.svg').png().toFile('og-website-brand.png')"
+          git show 7cf255fd38d6d0a3c9d25698b25f8cd04386ab5c:og-website-brand.png > og-website-brand.png
       - name: Commit preview PNG
         run: |
           git config user.name "github-actions[bot]"
