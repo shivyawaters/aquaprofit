@@ -24,13 +24,14 @@ export default {
       return env.VISIT_COUNTER.get(id).fetch(request);
     }
     // Social crawlers must receive a public, directly fetchable PNG with the correct MIME type.
-    if (url.pathname === '/og-website-brand.png' || url.pathname === '/aquaprofit-preview-20261031.png') {
-      const asset = await env.ASSETS.fetch(new Request(new URL('/og-website-brand.png', url.origin), request));
+    if (url.pathname === '/og-website-brand.png' || url.pathname === '/aquaprofit-preview-20261031.png' || url.pathname === '/aquaprofit-social-20261031.png') {
+      const asset = await env.ASSETS.fetch(new Request(new URL(url.pathname === '/aquaprofit-social-20261031.png' ? '/aquaprofit-social-20261031.png' : '/og-website-brand.png', url.origin), request));
       if (!asset.ok) return asset;
       const headers = new Headers(asset.headers);
       headers.set('Content-Type', 'image/png');
-      headers.set('Cache-Control', 'public, max-age=3600, s-maxage=3600');
+      headers.set('Cache-Control', 'public, max-age=86400, s-maxage=86400');
       headers.set('X-Content-Type-Options', 'nosniff');
+      headers.set('Access-Control-Allow-Origin', '*');
       return new Response(asset.body, {status:asset.status,headers});
     }
     return env.ASSETS.fetch(request);
