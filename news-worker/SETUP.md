@@ -13,3 +13,7 @@ This is a **separate Worker** so that the main static AquaProfit website remains
 7. Verify `/api/news` returns `items` before disabling the legacy browser feed fallback.
 
 The RSS publisher may not include article thumbnails; these remain missing until a publisher-supplied URL is available. Cloudflare free tier limits and publisher usage terms apply. No guaranteed monthly cost.
+
+## GitHub build connection
+
+The dedicated Worker uses `npx wrangler deploy --config news-worker/wrangler.jsonc` from the repository root. This is separate from the main AquaProfit static website. The existing `NEWS_DB` D1 binding must be checked after first deploy; if Wrangler-managed configuration does not retain it, add the database ID to the D1 binding in `wrangler.jsonc` before the next deployment. Do not claim a live news feed until the Worker and `/api/news` have been tested.
