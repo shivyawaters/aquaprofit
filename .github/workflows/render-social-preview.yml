@@ -15,6 +15,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Install proper sans-serif fonts for social thumbnail
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-liberation fontconfig
+          fc-cache -f
       - name: Render exact website-brand SVG as WhatsApp-compatible PNG
         run: |
           npm install --no-save --package-lock=false sharp
