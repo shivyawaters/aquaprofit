@@ -1,8 +1,25 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "aquaprofit",
+  "main": "src/worker.js",
   "compatibility_date": "2026-10-30",
   "assets": {
-    "directory": "./"
-  }
+    "directory": "./",
+    "binding": "ASSETS"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "VISIT_COUNTER",
+        "class_name": "VisitCounter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "VisitCounter"
+      ]
+    }
+  ]
 }
