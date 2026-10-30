@@ -1,0 +1,30 @@
+name: Render AquaProfit social preview
+on:
+  push:
+    paths:
+      - og-website-brand.svg
+      - .github/workflows/render-social-preview.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Render exact website-brand SVG as WhatsApp-compatible PNG
+        run: |
+          npm install --no-save --package-lock=false sharp
+          node -e "require('sharp')('og-website-brand.svg').png().toFile('og-website-brand.png')"
+      - name: Commit preview PNG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add og-website-brand.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Render website-accurate social preview PNG"
+            git push
+          fi
