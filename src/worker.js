@@ -23,6 +23,16 @@ export default {
       const id = env.VISIT_COUNTER.idFromName('aquaprofit-global-v1');
       return env.VISIT_COUNTER.get(id).fetch(request);
     }
+    // Social crawlers must receive a public, directly fetchable PNG with the correct MIME type.
+    if (url.pathname === '/og-website-brand.png') {
+      const asset = await env.ASSETS.fetch(new Request(new URL('/og-website-brand.png', url.origin), request));
+      if (!asset.ok) return asset;
+      const headers = new Headers(asset.headers);
+      headers.set('Content-Type', 'image/png');
+      headers.set('Cache-Control', 'public, max-age=3600, s-maxage=3600');
+      headers.set('X-Content-Type-Options', 'nosniff');
+      return new Response(asset.body, {status:asset.status,headers});
+    }
     return env.ASSETS.fetch(request);
   }
 };
