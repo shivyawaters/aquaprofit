@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS articles (id TEXT PRIMARY KEY,title TEXT NOT NULL,url TEXT NOT NULL,source TEXT,published_at TEXT NOT NULL,image_url TEXT,category TEXT NOT NULL,updated_at TEXT NOT NULL);CREATE INDEX IF NOT EXISTS articles_latest ON articles(published_at DESC);CREATE INDEX IF NOT EXISTS articles_category ON articles(category,published_at DESC);
