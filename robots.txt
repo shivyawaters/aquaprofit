@@ -1,3 +1,17 @@
+# AquaProfit - public manufacturer resources and tools
 User-agent: *
 Allow: /
+
+# Allow ChatGPT search discovery and user-requested retrieval
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Allow major search and AI search crawlers
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://www.aquaprofit.store/sitemap.xml
