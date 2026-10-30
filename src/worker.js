@@ -24,7 +24,7 @@ export default {
       return env.VISIT_COUNTER.get(id).fetch(request);
     }
     // Social crawlers must receive a public, directly fetchable PNG with the correct MIME type.
-    if (url.pathname === '/og-website-brand.png') {
+    if (url.pathname === '/og-website-brand.png' || url.pathname === '/aquaprofit-preview-20261031.png') {
       const asset = await env.ASSETS.fetch(new Request(new URL('/og-website-brand.png', url.origin), request));
       if (!asset.ok) return asset;
       const headers = new Headers(asset.headers);
