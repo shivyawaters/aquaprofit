@@ -23,12 +23,13 @@ jobs:
       - name: Render exact website-brand SVG as WhatsApp-compatible PNG
         run: |
           npm install --no-save --package-lock=false sharp
-          git show 7cf255fd38d6d0a3c9d25698b25f8cd04386ab5c:og-website-brand.png > og-website-brand.png
+          git cat-file blob 806ba270648586401f9f006e08adbe76bca985fc > og-website-brand.png
+          cp og-website-brand.png aquaprofit-social-20261031.png
       - name: Commit preview PNG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add og-website-brand.png
+          git add og-website-brand.png aquaprofit-social-20261031.png
           if ! git diff --cached --quiet; then
             git commit -m "Render website-accurate social preview PNG"
             git push
