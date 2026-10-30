@@ -1,18 +1,15 @@
 # AquaProfit
 
-Manufacturing intelligence and managed raw-material sourcing for packaged drinking water producers.
+Free break-even calculator and material sourcing enquiries for Indian packaged water manufacturers.
 
-## Deploy with Cloudflare Pages
+## Production
+Cloudflare Worker `aquaprofit`, configured in `wrangler.jsonc`, serves the static repository assets. `src/worker.js` owns the persistent visit counter. Keep its binding, migration and object name unchanged. Production domain: https://www.aquaprofit.store/.
 
-1. Log in to Cloudflare Dashboard > Workers & Pages > Create > Pages > Connect to Git.
-2. Authorize the GitHub account `shivyawaters` and select repository `shivyawaters/aquaprofit`.
-3. Choose the `main` branch and deploy as a static site. No build command is required. Set output directory to `/` (repository root) if asked.
-4. Cloudflare will show the assigned `*.pages.dev` URL after successful deployment.
+## Calculator
+No monthly production forecast is required. Contribution is ex-GST revenue less entered variable costs. Operating break-even is fixed monthly expenses / contribution, rounded up to whole cases; cash break-even adds EMI. Cases must be sold. Multi-SKU allocation, depreciation, financing interest and tax require separate treatment. Additional material allowance is additive consumption, not a rejection/yield calculation. Saved packs remain browser-local and can be exported.
 
-## Important MVP limitations
+## Enquiries
+The form reviews information before sending to the existing Formspree endpoint. Calculator context updates with material selection; sharing current purchase price is optional. A submission is shown as successful only after an OK provider response. In uncertain network failure, users retain their details and are asked to check delivery before retrying. Provider delivery, retention, anti-spam and inbox settings require account-side verification.
 
-This version is a browser-only prototype. Enquiries are saved in the user's localStorage and **are not sent to the business**. There is no login, backend, live supplier quotation system, admin access, or payment processing. No material prices are represented as live or verified.
-
-## Next production milestone
-
-Add Supabase authentication and database, role-based admin dashboard, server-side RFQ submission and status tracking, notifications, and secure supplier quotation management. Configure access controls before collecting real buyer information.
+## Content and assets
+Information pages use `assets/refinement.css`. `og-website-brand.svg` is the source for the PNG social preview. The existing GitHub workflow renders it after SVG changes. Actual device testing, email delivery, Search Console and supplier service commitments require operational verification. No fabricated supplier endorsements or delivery promises are published.

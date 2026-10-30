@@ -1,0 +1,33 @@
+/* AquaProfit: shared, responsive application and guide styling. */
+:root{--ap-navy:#122d4b;--ap-blue:#1555d5;--ap-muted:#52677f}
+[hidden]{display:none!important}body{font-family:Arial,sans-serif;color:var(--ap-navy)}
+body[data-view=cost] .ap-editorial,body[data-view=source] .ap-editorial{display:none}
+.ap-hero{background:linear-gradient(120deg,#102a47,#16426a)!important;padding:44px!important;gap:36px!important}
+.ap-hero h1{letter-spacing:-1.8px!important}.ap-hero p{font-size:16px!important;line-height:1.75!important}
+.ap-quote-cta{background:transparent!important;color:#fff!important;border:1px solid #8ab8da!important;margin:12px 0 0 10px}
+.ap-hero-foot{font-size:12px!important}.ap-panel-disclaimer{font-size:12px!important;line-height:1.65!important}
+.ap-start{margin-bottom:30px}.home-process{background:transparent!important;border:0!important;padding:26px 0!important;box-shadow:none!important}
+.home-trust{background:#e9f2fb!important;border-color:#d3e3f3!important}.home-trust p{font-size:15px!important;line-height:1.7!important}
+.ap-product-art{display:flex!important}.supply-product{min-height:230px!important}.supply-product strong{font-size:17px!important}
+.supply-art-icon{font-size:68px!important}.supply-hero{padding:34px!important}.supply-hero small{font-size:12px!important}
+.small,.field small,.supply-aside-note,.result-note{font-size:13px!important;line-height:1.65!important}
+.ap-extra-costs{background:#fff;border:1px solid #dce5ef;border-radius:14px;padding:20px;margin-top:16px}.ap-extra-costs summary{cursor:pointer;font-weight:700}
+.ap-calc-context{background:#edf6ff;border:1px solid #bfd8ef;padding:18px;border-radius:12px;font-size:14px;line-height:1.6}
+.ap-calc-context input[type=checkbox]{width:18px;height:18px;vertical-align:middle;margin-right:8px}
+.ap-review{border:1px solid #dce5ef;border-radius:20px;max-width:650px;width:calc(100% - 32px);max-height:85vh;padding:28px;color:#17324e;box-shadow:0 30px 100px #102a4740}
+.ap-review::backdrop{background:#102a47aa}.ap-review dl{display:grid;grid-template-columns:1fr 2fr;gap:12px;border-block:1px solid #dae5ef;padding:18px 0}.ap-review dt{text-transform:capitalize;font-weight:700}.ap-review dd{margin:0;overflow-wrap:anywhere;white-space:pre-wrap}
+.ap-home-materials{margin:38px 0}.ap-home-materials>p{color:var(--ap-muted);line-height:1.6}.ap-material-shortcuts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.ap-material-shortcuts button{padding:18px;border-radius:16px;background:#fff;border:1px solid #dce5ef;color:#17324e;font-weight:700;text-align:left}.ap-material-shortcuts svg{width:100%;height:95px;display:block;margin-bottom:12px}.ap-material-shortcuts span{display:block;color:#1555d5;font-size:13px;margin-top:8px}
+.ap-home-faq{margin:32px 0}.ap-home-faq details{padding:18px 0;border-bottom:1px solid #dce5ef}.ap-home-faq summary{font-weight:700;cursor:pointer}.ap-home-faq p{color:#52677f;line-height:1.7;max-width:800px}
+.ap-guide{margin:0;background:#f5f8fc!important;font:16px/1.75 Arial,sans-serif!important;color:#203b58!important}
+.ap-guide-header{position:static!important;background:#fff;padding:0 24px!important;border-bottom:1px solid #dce5ef}
+.ap-guide-header>div{max-width:1120px;margin:auto;min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.ap-guide-header .brand{display:flex!important;align-items:center;gap:10px;text-decoration:none!important;color:#17324e!important;white-space:nowrap;font-size:26px!important}
+.ap-guide-header .brandmark{width:35px;height:43px;color:#1555d5}.ap-guide-header .logo{font-size:26px;font-weight:800;letter-spacing:-1px}.ap-guide-header .logo b{color:#1555d5}.ap-guide-header small{display:block;font-size:9px;letter-spacing:1.3px;color:#52677f}
+.ap-guide-header nav{display:flex;gap:20px;flex-wrap:wrap}.ap-guide-header nav a{font-size:14px!important;color:#38536f!important;font-weight:700;text-decoration:none;min-height:44px;display:flex;align-items:center}
+.ap-guide main{max-width:1000px!important;padding:44px 24px 64px!important;margin:auto}.ap-guide h1{font-size:clamp(32px,4vw,48px)!important;line-height:1.15!important;letter-spacing:-1.3px;color:#142f4c}.ap-guide h2{font-size:25px;margin-top:30px}.ap-guide h3{font-size:19px}.ap-guide main>p:first-of-type{font-size:18px!important;line-height:1.7;color:#52677f}
+.ap-guide section{background:#fff;border:1px solid #e0e8f1;border-radius:18px;padding:26px;margin:24px 0}.ap-guide a{color:#1555d5}.ap-guide .button,.ap-guide .btn{display:inline-block;background:#1555d5;color:#fff;padding:12px 18px;border-radius:10px;margin:8px 8px 8px 0;text-decoration:none;font-weight:700}
+.ap-guide input{padding:12px;border:1px solid #c6d5e4;border-radius:8px;font-size:16px;max-width:100%}.ap-guide table{border-collapse:collapse;width:100%;font-size:15px}.ap-guide th,.ap-guide td{text-align:left;border-bottom:1px solid #e0e8f1;padding:13px 10px}.ap-guide th{color:#1555d5}
+.ap-guide-footer{padding:28px 24px!important;border-top:1px solid #dce5ef;background:#fff;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:14px}.ap-guide-footer nav{display:flex;gap:18px;flex-wrap:wrap}.ap-guide-footer a{color:#1555d5}.footer .wrap{gap:18px;flex-wrap:wrap}
+:focus-visible{outline:3px solid #6baaf5;outline-offset:4px}
+@media(max-width:700px){.ap-hero{padding:27px 22px!important;gap:24px!important}.ap-hero h1{font-size:36px!important}.ap-quote-cta{margin:10px 0 0!important;width:100%}.ap-main-cta{width:100%}.ap-material-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.ap-material-shortcuts button{padding:14px}.ap-guide-header>div{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 0}.ap-guide-header nav{gap:18px}.ap-guide-header nav a{font-size:13px!important}.ap-guide main{padding:28px 20px 50px!important}.ap-guide section{padding:20px!important}.ap-review{padding:20px}.ap-review dl{grid-template-columns:1fr;gap:5px}.ap-review dd{margin-bottom:12px}.ap-guide-footer{justify-content:flex-start}.supply-hero{padding:25px 20px!important}.hero-metric b{overflow-wrap:anywhere}.supply-product strong{font-size:15px!important}}
+@media print{.ap-extra-costs,.ap-calc-context,.ap-review,.ap-guide-header,.ap-guide-footer{display:none!important}}
