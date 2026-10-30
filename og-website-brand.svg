@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-<rect width="1200" height="630" fill="#f7faff"/><rect x="0" y="0" width="1200" height="10" fill="#1762d2"/>
+<rect width="1200" height="630" fill="#eef5ff"/><circle cx="1080" cy="85" r="250" fill="#dceaff" opacity=".65"/><circle cx="1110" cy="600" r="220" fill="#dceaff" opacity=".4"/><rect x="0" y="0" width="1200" height="10" fill="#1762d2"/>
 <g transform="translate(94 114) scale(3.6)"><path d="M20 2S3 23 3 31a17 17 0 0 0 34 0C37 23 20 2 20 2Z" fill="#1762d2"/><path d="m11 33 7-7 5 4 7-10M24 20h6v6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
 <text x="265" y="238" font-family="Liberation Sans, sans-serif" font-size="104" font-weight="bold" fill="#152b47">Aqua<tspan fill="#1762d2">Profit</tspan></text>
 <text x="272" y="286" font-family="Liberation Sans, sans-serif" font-size="21" font-weight="bold" letter-spacing="3" fill="#66788e">THE WATER BUSINESS TOOLKIT</text>
